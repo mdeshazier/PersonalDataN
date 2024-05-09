@@ -14,6 +14,8 @@ let adobeX
 let adobeY
 let adobe
 
+
+
 function setup(){
 	createCanvas(windowWidth, windowHeight);
 	background(121, 122, 122);
@@ -53,7 +55,13 @@ function preload (){
 	skims = loadImage ('images/skims.png')
 	wander = loadImage ('images/wander.png')
 	zendaya = loadImage ('images/zendaya.png')
+	random1 = loadImage ('images/random1.png')
+	random2 = loadImage ('images/random2.png')
+	ashley = loadImage('images/ashley.png')
+	zertec = loadImage('images/zertec.png')
+	mazda = loadImage('images/mazda.png')
 }
+
 
 function mouseMoved(){
 	fill(57, 126, 237, 120);
@@ -111,17 +119,17 @@ function mouseMoved(){
 	line(ex5, why5, random(0, windowWidth), random(0, windowHeight));
 	line(ex6, why6, random(0, windowWidth), random(0, windowHeight));
 	line(ex7, why7, random(0, windowWidth), random(0, windowHeight));
-	ellipse(ex, why, 60, 60);
-	ellipse(ex2, why2, 60, 60);
-	ellipse(ex3, why3, 60, 60);
-	ellipse(ex4, why4, 60, 60);
-	ellipse(ex5, why5, 60, 60);
-	ellipse(ex6, why6, 60, 60);
-	ellipse(ex7, why7, 60, 60);
-	ellipse(ex8, why8, 60, 60);
+	image(random2, ex, why, 60, 60);
+	image(random1, ex2, why2, 60, 60);
+	image(random2, ex3, why3, 60, 60);
+	image(mazda, ex4, why4, 60, 60);
+	image(zertec, ex5, why5, 60, 60);
+	image(ashley, ex6, why6, 60, 60);
+	image(mazda, ex7, why7, 60, 60);
+	image(random1, ex8, why8, 60, 60);
 
 	fill(57, 126, 237);
-	ellipse(mouseX, mouseY, 60, 60);
+	image(ashley, mouseX, mouseY, 60, 60);
 
 	if(dist(mouseX, mouseY, hotSpot1X, hotSpot1Y)< 75){
 		background(252, 210, 234)
